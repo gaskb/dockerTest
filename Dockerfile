@@ -20,14 +20,14 @@ RUN chmod 744 /tmp/scripts -R
 #RUN echo 'Hello Docker from APACHE2' > /var/www/html/index.html
 
 # Configuring APACHE
-COPY conf/apache/apache.conf /etc/apache2/sites-available/
+COPY conf/apache/creaverifiche.conf /etc/apache2/sites-available/
 RUN /tmp/scripts/apache.sh
 
 # Configuring SHIBBOLETH2
 CMD ["/bin/mv", "/etc/shibboleth/shibboleth2.xml", "/etc/shibboleth/shibboleth2.bk"]
 COPY conf/shibboleth/shibboleth2.xml /etc/shibboleth/shibboleth2.xml
 
-# Restarting services
+# Restarting services	
 CMD ["/etc/init.d/shibd", "restart"]
 CMD ["/etc/init.d/apache2", "restart"]
 
