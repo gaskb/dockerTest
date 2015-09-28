@@ -32,6 +32,6 @@ CMD ["/etc/init.d/shibd", "restart"]
 CMD ["/etc/init.d/apache2", "restart"]
 
 EXPOSE 80 443
-#CMD ["/bin/bash"]
+CMD ["/bin/bash"]
 #CMD ["nginx", "-g", "daemon off;"]
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+#CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
