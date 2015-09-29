@@ -4,9 +4,10 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Installa il compilatore per nginx, wget, php5
-#RUN apt-get install -y git gcc wget libpcre3 libpcre3-dev libssl-dev build-essential php5 htop php5-fpm 
-RUN apt-get install -y git wget libpcre3 libpcre3-dev libssl-dev build-essential php5 htop php5-fpm apache2
-RUN apt-get install -y shibboleth-sp2-schemas libshibsp-dev libshibsp-doc libapache2-mod-shib2 opensaml2-tools
+#RUN apt-get install -y gcc libpcre3 libpcre3-dev libssl-dev build-essential php5  php5-fpm 
+RUN apt-get install -y libpcre3 libpcre3-dev libssl-dev build-essential php5 php5-fpm apache2 libapache2-mod-php5
+RUN apt-get install -y shibboleth-sp2-schemas libshibsp-dev libshibsp-doc libapache2-mod-shib2 opensaml2-tools 
+RUN apt-get install -y vim htop wget git 
 
 # Coping preparing scripts
 COPY scripts /tmp/scripts
