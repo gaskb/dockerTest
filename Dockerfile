@@ -31,6 +31,8 @@ COPY conf/shibboleth/shibboleth2.xml /etc/shibboleth/shibboleth2.xml
 # Restarting services	
 CMD ["/etc/init.d/shibd", "restart"]
 CMD ["/etc/init.d/apache2", "restart"]
+CMD ["etc/init.d/shibd", "start"]
+
 
 EXPOSE 80 443
 #CMD ["/bin/bash"]

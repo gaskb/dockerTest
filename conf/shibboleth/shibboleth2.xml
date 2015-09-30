@@ -72,8 +72,8 @@
     <RequestMapper type="Native">
         <RequestMap applicationId="default">
             
-            <!-- Configurazione dominio tutor.scuola.zanichelli.inprocTimeout -->
-            <Host name="tutor.scuola.zanichelli.it" applicationId="tutor.scuola.zanichelli.it" authType="shibboleth">
+            <!-- Configurazione dominio demo.tutor.scuola.zanichelli.inprocTimeout -->
+            <Host name="demo.tutor.scuola.zanichelli.it" applicationId="demo.tutor.scuola.zanichelli.it" authType="shibboleth">
                 <PathRegex regex=".*" authType="shibboleth" requireSession="true"></PathRegex>
             </Host>
             
@@ -87,8 +87,8 @@
     points into to this section.
     -->
     <ApplicationDefaults id="default" policyId="default"
-        entityID="http://tutor.scuola.zanichelli.it/shibboleth"
-        homeURL="http://tutor.scuola.zanichelli.it/"
+        entityID="http://demo.tutor.scuola.zanichelli.it/shibboleth"
+        homeURL="http://demo.tutor.scuola.zanichelli.it/"
         REMOTE_USER="eppn persistent-id targeted-id"
         signing="back" encryption="false"
         >
@@ -263,7 +263,7 @@
 		
 		<!-- Aggiungere qui sotto le ulteriori entity della protezione -->
 
-        <ApplicationOverride id="tutor.scuola.zanichelli.it" entityID="http://tutor.scuola.zanichelli.it/shibboleth"/>
+        <ApplicationOverride id="demo.tutor.scuola.zanichelli.it" entityID="http://demo.tutor.scuola.zanichelli.it/shibboleth"/>
 
 		<!--<ApplicationOverride id="registro" entityID="http://registro.scuola.zanichelli.it/shibboleth"/>-->
 
